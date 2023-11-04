@@ -104,29 +104,28 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
         }
 
-        // Power
-        // [Test]
-        // public void Power_Valid()
-        // {
-        //     Assert.AreEqual(2, Program.Power("2", "1"));
-        //     Assert.AreEqual(16, Program.Power("4", "2"));
-        //     Assert.AreEqual(8, Program.Power("2", "3"));
-        // }
+        [Test]
+        public void Power_Valid()
+        {
+            Assert.AreEqual(2, Program.Power("2", "1"));
+            Assert.AreEqual(16, Program.Power("4", "2"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+        }
 
-        // [Test]
-        // public void Power_Invalid()
-        // {
-        //     Assert.Throws<FormatException>(() => Program.Power("1", "a"));
-        //     Assert.Throws<FormatException>(() => Program.Power("a", "1"));
-        //     Assert.Throws<FormatException>(() => Program.Power("a", "a"));
-        // }
+        [Test]
+        public void Power_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
 
-        // [Test]
-        // public void Power_Null()
-        // {
-        //     Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
-        //     Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
-        //     Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
-        // }
+        [Test]
+        public void Power_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
     }
 }
